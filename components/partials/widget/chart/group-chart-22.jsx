@@ -1,10 +1,13 @@
 import React from "react";
+import Card from "@/components/ui/Card";
+import Icon from "@/components/ui/Icon";
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const shapeLine1 = {
   series: [
     {
+      name: "MOM",
       data: [800, 600, 1000, 800, 600, 1000, 800, 900],
     },
   ],
@@ -32,7 +35,7 @@ const shapeLine1 = {
     },
     colors: ["#00EBFF"],
     tooltip: {
-      theme: "light",
+      theme: "dark",
     },
     grid: {
       show: false,
@@ -99,7 +102,7 @@ const shapeLine2 = {
     },
     colors: ["#FB8F65"],
     tooltip: {
-      theme: "light",
+      theme: "dark",
     },
     grid: {
       show: false,
@@ -166,7 +169,7 @@ const shapeLine3 = {
     },
     colors: ["#5743BE"],
     tooltip: {
-      theme: "light",
+      theme: "dark",
     },
     grid: {
       show: false,
@@ -207,57 +210,70 @@ const shapeLine3 = {
 const statistics = [
   {
     name: shapeLine1,
-    title: "Financial Instruments",
-    count: "$763,564",
+    title: "Individual",
+    count: "90,39,564",
     bg: "bg-[#E5F9FF] dark:bg-slate-900	",
+    text: "text-info-500",
+    icon: "heroicons:shopping-cart",
   },
   {
     name: shapeLine2,
-    title: "Proprietary Tokens",
-    count: "$87,564",
-    bg: "bg-[#FFEDE5] dark:bg-slate-900	",
+    title: "Institutional",
+    count: "14,343,036",
+    bg: "bg-[#FFEDE6] dark:bg-slate-900	",
+    text: "text-warning-500",
+    icon: "heroicons:cube",
   },
   {
     name: shapeLine3,
-    title: "Unbacked Crypto Assets",
-    count: "$2,997,766",
-    bg: "bg-[#EAE5FF] dark:bg-slate-900	",
-  },
-  {
-    name: shapeLine3,
-    title: "Stable Coins",
-    count: "$488,323,865",
-    bg: "bg-[#FFEDE5] dark:bg-slate-900	",
+    title: "Proprietary",
+    count: "9,872,233",
+    bg: "bg-[#EAE6FF] dark:bg-slate-900	",
+    text: "text-[#5743BE]",
+    icon: "heroicons:arrow-trending-up-solid",
   },
 ];
-const GroupChart1 = () => {
+
+const GroupChart22 = () => {
   return (
     <>
+      {" "}
       {statistics.map((item, i) => (
-        <div className={`py-[18px] px-4 rounded-[6px] ${item.bg}`} key={i}>
-          <div className="flex items-center space-x-6 rtl:space-x-reverse">
-            <div className="flex-none">
+        <div key={i}>
+          <Card bodyClass="pt-4 pb-3 px-4">
+            <div className="flex space-x-3 rtl:space-x-reverse">
+              <div className="flex-none">
+                <div
+                  className={`${item.bg} ${item.text} h-12 w-12 rounded-full flex flex-col items-center justify-center text-2xl`}
+                >
+                  <Icon icon={item.icon} />
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="text-slate-600 dark:text-slate-300 text-sm mb-1 font-medium">
+                  {item.title}
+                </div>
+                <div className="text-slate-900 dark:text-white text-lg font-medium">
+                  {item.count}
+                </div>
+              </div>
+            </div>
+            <div className="ltr:ml-auto rtl:mr-auto max-w-[145px]">
               <Chart
                 options={item.name.options}
                 series={item.name.series}
                 type="area"
-                height={48}
-                width={48}
+                height="41"
+                width="145"
               />
+
+              <p className="text-xs mt-1 opacity-30">MoM (Month on Month)</p>
             </div>
-            <div className="flex-1">
-              <div className="text-slate-800 dark:text-slate-300 text-sm mb-1 font-medium">
-                {item.title}
-              </div>
-              <div className="text-slate-900 dark:text-white text-lg font-medium">
-                {item.count}
-              </div>
-            </div>
-          </div>
+          </Card>
         </div>
       ))}
     </>
   );
 };
 
-export default GroupChart1;
+export default GroupChart22;

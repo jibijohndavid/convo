@@ -50,6 +50,9 @@ const Sidebar = () => {
         }}
       >
         <SidebarLogo menuHover={menuHover} />
+        <p className="px-4 text-sm font-bold mb-4">
+          Crypto Supervision Dashboard
+        </p>
         <div
           className={`h-[60px]  absolute top-[80px] nav-shadow z-[1] w-full transition-all duration-200 pointer-events-none ${
             scroll ? " opacity-100" : " opacity-0"

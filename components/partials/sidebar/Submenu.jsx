@@ -53,6 +53,15 @@ const Submenu = ({ activeSubmenu, item, i, locationName }) => {
                   locationName={locationName}
                 />
               </div>
+            ) : subItem.emptyLink ? (
+              <span
+                className={`text-slate-600 cursor-pointer dark:text-slate-300 text-sm flex space-x-3 items-center transition-all duration-150`}
+              >
+                <span
+                  className={`h-2 w-2 rounded-full border border-slate-600 dark:border-white inline-block flex-none`}
+                ></span>
+                <span className="flex-1">{subItem.childtitle}</span>
+              </span>
             ) : (
               <Link href={subItem.childlink}>
                 <span

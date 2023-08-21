@@ -1,26 +1,27 @@
+import React from "react";
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
-import useDarkMode from "@/hooks/useDarkMode";
 import { colors } from "@/constant/data";
+import useDarkMode from "@/hooks/useDarkMode";
 
-const BasicArea = ({ height = 350 }) => {
+const HistoryChart2 = ({ height = 360 }) => {
   const [isDark] = useDarkMode();
   const series = [
     {
       name: "Transactions",
-      data: [90, 70, 85, 60, 80, 70, 90, 75],
+      data: [31, 40, 28, 51, 42, 109, 100],
     },
     {
       name: "Values",
-      data: [10, 20, 35, 40, 50, 90, 80, 65],
+      data: [11, 32, 45, 32, 34, 52, 41],
     },
     {
-      name: "Active Wallets",
-      data: [20, 30, 55, 50, 30, 40, 60, 85],
+      name: "Miners/Validators",
+      data: [10, 31, 42, 38, 32, 22, 11],
     },
     {
       name: "Active Protocols & Assets",
-      data: [30, 20, 55, 40, 48, 60, 70, 55],
+      data: [31, 12, 65, 72, 84, 92, 81],
     },
   ];
   const options = {
@@ -28,32 +29,22 @@ const BasicArea = ({ height = 350 }) => {
       toolbar: {
         show: false,
       },
+      offsetX: 0,
+      offsetY: 0,
+      zoom: {
+        enabled: false,
+      },
     },
     dataLabels: {
       enabled: false,
     },
     stroke: {
-      curve: "smooth",
-      width: 4,
+      curve: "straight",
+      width: 2,
     },
     colors: [colors.primary, colors.warning, colors.secondary, colors.info],
     tooltip: {
       theme: "dark",
-    },
-    grid: {
-      show: true,
-      borderColor: isDark ? "#334155" : "#e2e8f0",
-      strokeDashArray: 10,
-      position: "back",
-    },
-    fill: {
-      type: "gradient",
-      gradient: {
-        shadeIntensity: 1,
-        opacityFrom: 0.4,
-        opacityTo: 0.5,
-        stops: [50, 100, 0],
-      },
     },
     legend: {
       offsetY: 4,
@@ -75,6 +66,21 @@ const BasicArea = ({ height = 350 }) => {
         vertical: 0,
       },
     },
+    grid: {
+      show: true,
+      borderColor: isDark ? "#334155" : "#e2e8f0",
+      strokeDashArray: 10,
+      position: "back",
+    },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 0.3,
+        opacityFrom: 0.4,
+        opacityTo: 0.5,
+        stops: [0, 30, 0],
+      },
+    },
     yaxis: {
       labels: {
         style: {
@@ -84,32 +90,27 @@ const BasicArea = ({ height = 350 }) => {
       },
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-      labels: {
-        style: {
-          colors: isDark ? "#CBD5E1" : "#475569",
-          fontFamily: "Inter",
-        },
-      },
+      type: "number",
+      categories: ["T-1", "T-2", "T-3", "T-4", "T-5", "T-6", "T"],
       axisBorder: {
         show: false,
       },
       axisTicks: {
         show: false,
       },
-    },
-    padding: {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
+      labels: {
+        style: {
+          colors: isDark ? "#CBD5E1" : "#475569",
+          fontFamily: "Inter",
+        },
+      },
     },
   };
   return (
-    <div>
+    <>
       <Chart options={options} series={series} type="area" height={height} />
-    </div>
+    </>
   );
 };
 
-export default BasicArea;
+export default HistoryChart2;

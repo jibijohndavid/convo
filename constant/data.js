@@ -10,12 +10,48 @@ export const menuItems = [
         childlink: "",
       },
       {
-        childtitle: "De Fi Financial Health Aave",
+        childtitle: "CeFi Reserves",
+        childlink: "reserves",
+      },
+      {
+        childtitle: "CeFi Leverage",
+        childlink: "reserves",
+        emptyLink: true,
+      },
+      {
+        childtitle:
+          "CeFi Interconnections: Entities (Domestic & International)",
+        childlink: "reserves",
+        emptyLink: true,
+      },
+      {
+        childtitle: "DeFi Financial Health Aave",
         childlink: "definancial",
       },
       {
-        childtitle: "Ce Fi Proof of Reserves",
-        childlink: "reserves",
+        childtitle: "DeFi Reserves",
+        childlink: "definancial",
+        emptyLink: true,
+      },
+      {
+        childtitle: "DeFi Leverage",
+        childlink: "definancial",
+        emptyLink: true,
+      },
+      {
+        childtitle: "DeFi Traded Assets/ Products",
+        childlink: "definancial",
+        emptyLink: true,
+      },
+      {
+        childtitle: "DeFi Interconnections: Protocols",
+        childlink: "definancial",
+        emptyLink: true,
+      },
+      {
+        childtitle: "DeFi Cross-chain bridges",
+        childlink: "definancial",
+        emptyLink: true,
       },
     ],
   },
@@ -30,7 +66,7 @@ export const menuItems = [
     title: "Vault",
     isHide: true,
     icon: "heroicons-outline:lock-closed",
-    link: "analytics",
+    link: "vaults",
   },
 ];
 

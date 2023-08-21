@@ -3,31 +3,32 @@ import Icon from "@/components/ui/Icon";
 
 const statistics = [
   {
-    title: "Reserve Ratio",
-    count: "4:1",
-    bg: "bg-info-500",
-    text: "text-info-500",
+    title: "Ratio to Market Flucatuations",
+    count: "6:1",
+    bg: "bg-red-500",
+    text: "text-red-500",
     percent: "25.67% ",
     icon: "heroicons-outline:menu-alt-1",
   },
   {
-    title: "Ratio to Liabilities",
-    count: "5:1",
-    bg: "bg-warning-500",
-    text: "text-warning-500",
+    title: "Threshold Surplus",
+    count: "40%",
+
+    bg: "bg-yellow-500",
+    text: "text-yellow-500",
     percent: "8.67%",
     icon: "heroicons-outline:chart-pie",
   },
   {
-    title: "Ratio to Collaterals",
-    count: "3:1",
-    bg: "bg-primary-500",
-    text: "text-primary-500",
+    title: "Threshold Dip",
+    count: "0.0%",
+    bg: "bg-teal-500",
+    text: "text-teal-500",
     percent: "1.67%  ",
     icon: "heroicons-outline:clock",
   },
 ];
-const GroupChart4 = () => {
+const GroupChart44 = () => {
   return (
     <>
       {statistics.map((item, i) => (
@@ -52,4 +53,4 @@ const GroupChart4 = () => {
   );
 };
 
-export default GroupChart4;
+export default GroupChart44;

@@ -34,7 +34,7 @@ const shapeLine1 = {
     },
     colors: ["#00EBFF"],
     tooltip: {
-      theme: "light",
+      theme: "dark",
     },
     grid: {
       show: false,
@@ -101,7 +101,7 @@ const shapeLine2 = {
     },
     colors: ["#FB8F65"],
     tooltip: {
-      theme: "light",
+      theme: "dark",
     },
     grid: {
       show: false,
@@ -159,6 +159,7 @@ const shapeLine3 = {
         enabled: true,
       },
     },
+
     dataLabels: {
       enabled: false,
     },
@@ -168,7 +169,7 @@ const shapeLine3 = {
     },
     colors: ["#5743BE"],
     tooltip: {
-      theme: "light",
+      theme: "dark",
     },
     grid: {
       show: false,
@@ -257,14 +258,15 @@ const GroupChart2 = () => {
                 </div>
               </div>
             </div>
-            <div className="ltr:ml-auto rtl:mr-auto max-w-[124px]">
+            <div className="ltr:ml-auto rtl:mr-auto max-w-[145px] mt-4">
               <Chart
                 options={item.name.options}
                 series={item.name.series}
                 type="area"
                 height="41"
-                width="124"
+                width="145"
               />
+              <p className="text-xs mt-1 opacity-30">MoM (Month on Month)</p>
             </div>
           </Card>
         </div>

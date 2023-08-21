@@ -3,14 +3,14 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import useDarkMode from "@/hooks/useDarkMode";
 
-const EarningChart = ({
+const EarningChart2 = ({
   className = "bg-slate-50 dark:bg-slate-900 rounded py-3 px-4 md:col-span-2",
 }) => {
   const [isDark] = useDarkMode();
-  const series = [44, 55];
+  const series = [85, 25];
 
   const options = {
-    labels: ["Processed", "Completed"],
+    labels: ["Successful", "Rejected"],
     dataLabels: {
       enabled: false,
     },
@@ -59,13 +59,13 @@ const EarningChart = ({
       <div className="flex items-center">
         <div className="flex-none">
           <div className="text-xl text-slate-600 dark:text-slate-300 mb-[6px]">
-            Orders
+            Earnings
           </div>
           <div className="text-lg text-slate-900 dark:text-white font-medium mb-[6px]">
-            $532,765.00
+            $12,335.00
           </div>
           <div className="font-normal text-xs text-slate-600 dark:text-slate-300">
-            <span className="text-primary-500">+17% </span>
+            <span className="text-primary-500">+08% </span>
             From last Week
           </div>
         </div>
@@ -84,4 +84,4 @@ const EarningChart = ({
   );
 };
 
-export default EarningChart;
+export default EarningChart2;

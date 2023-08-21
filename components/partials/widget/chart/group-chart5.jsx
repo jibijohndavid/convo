@@ -6,7 +6,7 @@ const columnCharthome2 = {
   series: [
     {
       name: "Revenue",
-      data: [40, 70, 45, 100, 75, 40, 80, 90],
+      data: [40, 70, 45, 100, 75, 40, 80],
     },
   ],
   options: {
@@ -76,7 +76,7 @@ const columnCharthome3 = {
   series: [
     {
       name: "Revenue",
-      data: [40, 70, 45, 100, 75, 40, 80, 90],
+      data: [40, 70, 45, 100, 75, 40, 80],
     },
   ],
   options: {
@@ -146,7 +146,7 @@ const columnCharthome4 = {
   series: [
     {
       name: "Revenue",
-      data: [40, 70, 45, 100, 75, 40, 80, 90],
+      data: [40, 70, 45, 100, 75, 40, 80],
     },
   ],
   options: {
@@ -216,7 +216,7 @@ const columnCharthome5 = {
   series: [
     {
       name: "Revenue",
-      data: [40, 70, 45, 100, 75, 40, 80, 90],
+      data: [40, 70, 45, 100, 75, 40, 80],
     },
   ],
   options: {
@@ -335,14 +335,16 @@ const GroupChart5 = () => {
           <div className="text-slate-900 dark:text-white text-lg font-medium">
             {item.count}
           </div>
-          <div className="ml-auto max-w-[124px]">
+          <div className="ml-auto max-w-[140px]">
             <Chart
               options={item.name.options}
               series={item.name.series}
               type="bar"
               height="48"
-              width="124"
+              width="140"
             />
+
+            <p className="text-xs mt-1 ml-3 opacity-30">WoW (Week on Week)</p>
           </div>
         </div>
       ))}

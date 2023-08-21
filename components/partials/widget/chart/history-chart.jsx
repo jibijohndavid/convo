@@ -91,7 +91,7 @@ const HistoryChart = ({ height = 360 }) => {
     },
     xaxis: {
       type: "number",
-      categories: ["1", "2", "3", "4", "5", "6", "7"],
+      categories: ["T-1", "T-2", "T-3", "T-4", "T-5", "T-6", "T"],
       axisBorder: {
         show: false,
       },

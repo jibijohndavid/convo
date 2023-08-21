@@ -12,6 +12,11 @@ import ProfitChart from "@/components/partials/widget/chart/profit-chart";
 import EarningChart from "@/components/partials/widget/chart/earning-chart";
 import TransactionsTable from "@/components/partials/table/transactions";
 import HistoryChart from "@/components/partials/widget/chart/history-chart";
+import ImageBlock3 from "@/components/partials/widget/block/image-block-3";
+import GroupChart22 from "@/components/partials/widget/chart/group-chart-22";
+import EarningChart2 from "@/components/partials/widget/chart/earning-chart2";
+import HistoryChart2 from "@/components/partials/widget/chart/history-chart2";
+import Marquee from "react-fast-marquee";
 
 const MostSales = dynamic(
   () => import("@/components/partials/widget/most-sales"),
@@ -34,11 +39,75 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <div className="grid grid-cols-12 gap-5 mb-5">
+        <div className="2xl:col-span-3 lg:col-span-4 col-span-12">
+          <ImageBlock3 />
+        </div>
+        <div className="2xl:col-span-9 lg:col-span-8 col-span-12">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+            <GroupChart22 />
+          </div>
+        </div>
+      </div>
       <Card title="Transactions">
         <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 place-content-center">
           <GroupChart5 />
         </div>
       </Card>
+
+      <Card className="mt-6">
+        <Marquee pauseOnHover>
+          <p className="mx-4">
+            High frequency large-value transactions:{" "}
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 45
+            </span>
+            ,&nbsp;
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 53
+            </span>
+            ,&nbsp;
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 68
+            </span>
+          </p>
+          <p>|</p>
+          <p className="mx-4">High-value transactions customer wallets</p>
+          <p>|</p>
+
+          <p className="mx-4">
+            Suspicious high-volume on-chain activities/wallets:{" "}
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 5
+            </span>
+            ,&nbsp;
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 30
+            </span>
+            ,&nbsp;
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 61
+            </span>
+          </p>
+          <p>|</p>
+
+          <p className="mx-4">
+            Suspicious high-volume cross-chain activities/wallets:{" "}
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 50
+            </span>
+            ,&nbsp;
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 3
+            </span>
+            ,&nbsp;
+            <span className="hover:underline cursor-pointer text-blue-500">
+              Transaction 82
+            </span>
+          </p>
+        </Marquee>
+      </Card>
+
       <div className="grid grid-cols-12 gap-5 mt-5">
         <div className="2xl:col-span-8 lg:col-span-7 col-span-12">
           <Card title="Top 6 High Value Transactions" noborder>
@@ -48,10 +117,12 @@ const Dashboard = () => {
         <div className="2xl:col-span-4 lg:col-span-5 col-span-12">
           <Card>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
-              <OrderChart />
-              <ProfitChart />
               <div className="md:col-span-2">
                 <EarningChart />
+              </div>
+
+              <div className="md:col-span-2">
+                <EarningChart2 />
               </div>
             </div>
           </Card>
@@ -81,7 +152,7 @@ const Dashboard = () => {
           <div className="space-y-5 bank-table">
             <Card title="Mining (Active Trackers)">
               <div className="legend-ring4">
-                <HistoryChart />
+                <HistoryChart2 />
               </div>
             </Card>
           </div>
