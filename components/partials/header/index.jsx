@@ -21,6 +21,9 @@ const Header = ({ className = "custom-class" }) => {
   const { width, breakpoints } = useWidth();
   const [navbarType] = useNavbarType();
   const navbarTypeClass = () => {
+    if (width < breakpoints.md) {
+      return "sticky top-0 z-[999]";
+    }
     switch (navbarType) {
       case "floating":
         return "floating  has-sticky-header";
@@ -82,7 +85,7 @@ const Header = ({ className = "custom-class" }) => {
                   )}
                 </button>
               )}
-              {width < breakpoints.xl && <Logo />}
+              {/* {width < breakpoints.xl && <Logo />} */}
               {/* open mobile menu handlaer*/}
               {width < breakpoints.xl && width >= breakpoints.md && (
                 <div
@@ -98,7 +101,7 @@ const Header = ({ className = "custom-class" }) => {
           {/* For Horizontal  */}
           {menuType === "horizontal" && (
             <div className="flex items-center space-x-4 rtl:space-x-reverse">
-              <Logo />
+              {/* <Logo /> */}
               {/* open mobile menu handlaer*/}
               {width <= breakpoints.xl && (
                 <div
@@ -116,8 +119,8 @@ const Header = ({ className = "custom-class" }) => {
           ) : null}
           {/* Nav Tools  */}
           <div className="nav-tools flex items-center lg:space-x-6 space-x-3 rtl:space-x-reverse">
-            <Language />
-            <SwitchDark />
+            {/* <Language />
+            <SwitchDark /> */}
 
             {width >= breakpoints.md && <Message />}
             {width >= breakpoints.md && <Notification />}
