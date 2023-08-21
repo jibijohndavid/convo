@@ -27,21 +27,21 @@ const SidebarLogo = ({ menuHover }) => {
     >
       <Link href="/">
         <div className="flex items-center space-x-4">
-          <div className="logo-icon">
+          <div className="logo-icon w-32">
             {!isDark && !isSemiDark ? (
-              <img src="/assets/images/logo/logoipsum.svg" alt="" />
+              <img src="/assets/images/logo/policylogo.png" alt="" />
             ) : (
-              <img src="/assets/images/logo/logoipsum.svg" alt="" />
+              <img src="/assets/images/logo/policylogo.png" alt="" />
             )}
           </div>
 
-          {(!collapsed || menuHover) && (
+          {/* {(!collapsed || menuHover) && (
             <div>
               <h1 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
                 Convo
               </h1>
             </div>
-          )}
+          )} */}
         </div>
       </Link>
 
