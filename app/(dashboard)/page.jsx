@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <HomeBredCurbs title="Country-Level Dashboard (24 Hours)" />
+      <HomeBredCurbs title="Summary Dashboard" />
       <div className="grid grid-cols-12 gap-5 mb-5">
         <div className="col-span-8">
           <p className="text-lg p-4 py-2 dark:bg-slate-800 bg-white rounded-md mb-3">
