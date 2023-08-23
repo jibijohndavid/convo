@@ -7,16 +7,21 @@ import GroupChart5 from "@/components/partials/widget/chart/group-chart5";
 import GroupChart2 from "@/components/partials/widget/chart/group-chart-2";
 import ImageBlock2 from "@/components/partials/widget/block/image-block-2";
 import TeamTable from "@/components/partials/table/team-table";
-import OrderChart from "@/components/partials/widget/chart/order-chart";
-import ProfitChart from "@/components/partials/widget/chart/profit-chart";
 import EarningChart from "@/components/partials/widget/chart/earning-chart";
-import TransactionsTable from "@/components/partials/table/transactions";
 import HistoryChart from "@/components/partials/widget/chart/history-chart";
 import ImageBlock3 from "@/components/partials/widget/block/image-block-3";
 import GroupChart22 from "@/components/partials/widget/chart/group-chart-22";
 import EarningChart2 from "@/components/partials/widget/chart/earning-chart2";
 import HistoryChart2 from "@/components/partials/widget/chart/history-chart2";
 import Marquee from "react-fast-marquee";
+import RadarChart from "@/components/partials/widget/chart/radar-chart";
+import RadarChart2 from "@/components/partials/widget/chart/radar-chart2";
+import RadarChart3 from "@/components/partials/widget/chart/radar-chart3";
+import RadarChart4 from "@/components/partials/widget/chart/radar-chart4";
+import RecentActivity from "@/components/partials/widget/recent-activity";
+import RadarChart5 from "@/components/partials/widget/chart/radar-chart5";
+import RadarChart6 from "@/components/partials/widget/chart/radar-chart6";
+import RecentActivity2 from "@/components/partials/widget/recent-activity2";
 
 const MostSales = dynamic(
   () => import("@/components/partials/widget/most-sales"),
@@ -26,9 +31,62 @@ const MostSales = dynamic(
 );
 const Dashboard = () => {
   const [filterMap, setFilterMap] = useState("usa");
+
   return (
     <div>
       <HomeBredCurbs title="Country-Level Dashboard (24 Hours)" />
+      <div className="grid grid-cols-12 gap-5 mb-5">
+        <div className="col-span-8">
+          <p className="text-lg p-4 py-2 dark:bg-slate-800 bg-white rounded-md mb-3">
+            Risk Meter
+          </p>
+
+          <div className="grid grid-cols-3 gap-5 mb-5">
+            <Card bodyClass="pt-2 py-7">
+              <RadarChart />
+              <p className="text-center text-sm">
+                Financial Crime & AML/CFT Risk
+              </p>
+            </Card>
+            <Card bodyClass="pt-2 py-7">
+              <RadarChart2 />
+              <p className="text-center text-sm">Consumer Protection Risk</p>
+            </Card>
+            <Card bodyClass="pt-2 py-7">
+              <RadarChart3 />
+              <p className="text-center text-sm">Prudential Risk</p>
+            </Card>
+            <Card bodyClass="pt-2 py-7">
+              <RadarChart4 />
+              <p className="text-center text-sm">Financial Stability Risk</p>
+            </Card>
+            <Card bodyClass="pt-2 py-7">
+              <RadarChart5 />
+              <p className="text-center text-sm">Market Integrity Risk</p>
+            </Card>
+            <Card bodyClass="pt-2 py-7">
+              <RadarChart6 />
+              <p className="text-center text-sm">Cybersecurity Risk</p>
+            </Card>
+          </div>
+        </div>
+        <div className="col-span-4">
+          <Card
+            title="CeFi: Market Trends & Major Incidents (24 hrs)"
+            className="mb-6"
+            titleClass="text-sm"
+          >
+            <RecentActivity />
+          </Card>
+          <Card
+            title="DeFi: Market Trends & Major Incidents (24 hrs)"
+            titleClass="text-sm"
+          >
+            <RecentActivity2 />
+          </Card>
+        </div>
+      </div>
+
       <div className="grid grid-cols-12 gap-5 mb-5">
         <div className="2xl:col-span-3 lg:col-span-4 col-span-12">
           <ImageBlock2 />

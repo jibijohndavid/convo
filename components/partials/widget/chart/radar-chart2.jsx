@@ -3,9 +3,9 @@ import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import useDarkMode from "@/hooks/useDarkMode";
 
-const RadarChart = () => {
+const RadarChart2 = () => {
   const [isDark] = useDarkMode();
-  const series = [67];
+  const series = [59];
   const options = {
     chart: {
       toolbar: {
@@ -18,7 +18,7 @@ const RadarChart = () => {
         endAngle: 135,
         dataLabels: {
           name: {
-            fontSize: "16px",
+            fontSize: "22px",
             color: isDark ? "#E2E8F0" : "#475569",
           },
           value: {
@@ -57,4 +57,4 @@ const RadarChart = () => {
   );
 };
 
-export default RadarChart;
+export default RadarChart2;
