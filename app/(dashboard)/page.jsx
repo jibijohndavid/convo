@@ -37,34 +37,34 @@ const Dashboard = () => {
       <HomeBredCurbs title="Summary Dashboard" />
       <div className="grid grid-cols-12 gap-5 mb-5">
         <div className="col-span-8">
-          <p className="text-lg p-4 py-2 dark:bg-slate-800 bg-white rounded-md mb-3">
+          <p className="text-xl px-4 py-6 dark:bg-slate-800 bg-white rounded-md mb-3">
             Risk Meter
           </p>
 
           <div className="grid grid-cols-3 gap-5 mb-5">
-            <Card bodyClass="pt-2 py-7">
+            <Card bodyClass="pt-3 py-8">
               <RadarChart />
               <p className="text-center text-sm">
                 Financial Crime & AML/CFT Risk
               </p>
             </Card>
-            <Card bodyClass="pt-2 py-7">
+            <Card bodyClass="pt-3 py-8">
               <RadarChart2 />
               <p className="text-center text-sm">Consumer Protection Risk</p>
             </Card>
-            <Card bodyClass="pt-2 py-7">
+            <Card bodyClass="pt-3 py-8">
               <RadarChart3 />
               <p className="text-center text-sm">Prudential Risk</p>
             </Card>
-            <Card bodyClass="pt-2 py-7">
+            <Card bodyClass="pt-3 py-8">
               <RadarChart4 />
               <p className="text-center text-sm">Financial Stability Risk</p>
             </Card>
-            <Card bodyClass="pt-2 py-7">
+            <Card bodyClass="pt-3 py-8">
               <RadarChart5 />
               <p className="text-center text-sm">Market Integrity Risk</p>
             </Card>
-            <Card bodyClass="pt-2 py-7">
+            <Card bodyClass="pt-3 py-8">
               <RadarChart6 />
               <p className="text-center text-sm">Cybersecurity Risk</p>
             </Card>

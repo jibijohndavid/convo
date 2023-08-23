@@ -19,6 +19,12 @@ const activity = [
     img: "/assets/images/users/user-4.jpg",
     link: "New DeFi Index Sparks Investment",
   },
+
+  {
+    id: 5,
+    img: "/assets/images/users/user-4.jpg",
+    link: "DAO Governance Expands, Prompting Oversight",
+  },
 ];
 
 const RecentActivity2 = () => {
