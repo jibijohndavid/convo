@@ -70,6 +70,7 @@ const Dashboard = () => {
             </Card>
           </div>
         </div>
+
         <div className="col-span-4">
           <Card
             title="CeFi: Market Trends & Major Incidents (24 hrs)"
@@ -87,33 +88,10 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-5 mb-5">
-        <div className="2xl:col-span-3 lg:col-span-4 col-span-12">
-          <ImageBlock2 />
-        </div>
-        <div className="2xl:col-span-9 lg:col-span-8 col-span-12">
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-            <GroupChart2 />
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-12 gap-5 mb-5">
-        <div className="2xl:col-span-3 lg:col-span-4 col-span-12">
-          <ImageBlock3 />
-        </div>
-        <div className="2xl:col-span-9 lg:col-span-8 col-span-12">
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
-            <GroupChart22 />
-          </div>
-        </div>
-      </div>
-      <Card title="Transactions">
-        <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 place-content-center">
-          <GroupChart5 />
-        </div>
-      </Card>
-
-      <Card className="mt-6">
+      <Card
+        title="Warnings for your jurisdiction (last 24 hrs)"
+        className="mb-6"
+      >
         <Marquee pauseOnHover>
           <p className="mx-4">
             High frequency large-value transactions:{" "}
@@ -164,6 +142,32 @@ const Dashboard = () => {
             </span>
           </p>
         </Marquee>
+      </Card>
+
+      <div className="grid grid-cols-12 gap-5 mb-5">
+        <div className="2xl:col-span-3 lg:col-span-4 col-span-12">
+          <ImageBlock2 />
+        </div>
+        <div className="2xl:col-span-9 lg:col-span-8 col-span-12">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+            <GroupChart2 />
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-12 gap-5 mb-5">
+        <div className="2xl:col-span-3 lg:col-span-4 col-span-12">
+          <ImageBlock3 />
+        </div>
+        <div className="2xl:col-span-9 lg:col-span-8 col-span-12">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+            <GroupChart22 />
+          </div>
+        </div>
+      </div>
+      <Card title="Transactions">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5 place-content-center">
+          <GroupChart5 />
+        </div>
       </Card>
 
       <div className="grid grid-cols-12 gap-5 mt-5">
