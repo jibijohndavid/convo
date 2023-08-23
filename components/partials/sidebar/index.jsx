@@ -50,8 +50,10 @@ const Sidebar = () => {
         }}
       >
         <SidebarLogo menuHover={menuHover} />
-        <p className="px-4 text-sm font-bold mb-4">
-          Crypto Supervision Dashboard
+        <p className="px-4 text-sm font-bold mb-1">Crypto Sentinel</p>
+        <p className="px-4 mb-4 text-sm">
+          A comprehensive crypto SupTech tool for CeFi and DeFi activity in a
+          jurisdiction
         </p>
         <div
           className={`h-[60px]  absolute top-[80px] nav-shadow z-[1] w-full transition-all duration-200 pointer-events-none ${
