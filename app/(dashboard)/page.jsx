@@ -171,12 +171,12 @@ const Dashboard = () => {
       </Card>
 
       <div className="grid grid-cols-12 gap-5 mt-5">
-        <div className="2xl:col-span-8 lg:col-span-7 col-span-12">
-          <Card title="Top 6 High Value Transactions" noborder>
+        <div className="2xl:col-span-8 lg:col-span-8 col-span-12">
+          <Card title="Wallets with large transactions (24 hrs)" noborder>
             <TeamTable />
           </Card>
         </div>
-        <div className="2xl:col-span-4 lg:col-span-5 col-span-12">
+        <div className="2xl:col-span-4 lg:col-span-4 col-span-12">
           <Card>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
               <div className="md:col-span-2">

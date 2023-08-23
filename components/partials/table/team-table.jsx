@@ -102,15 +102,15 @@ const COLUMNS = [
     accessor: "customer",
     Cell: (row) => {
       return (
-        <span className="flex items-center min-w-[150px]">
-          <span className="w-8 h-8 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
+        <span className="flex items-center min-w-[150px] py-1.5">
+          {/* <span className="w-8 h-8 rounded-full ltr:mr-3 rtl:ml-3 flex-none">
             <img
               src={row?.cell?.value.image}
               alt={row?.cell?.value.name}
               className="object-cover w-full h-full rounded-full"
             />
-          </span>
-          <span className="text-sm text-slate-600 dark:text-slate-300 capitalize">
+          </span> */}
+          <span className="text-sm text-slate-600 font-bold dark:text-slate-300 capitalize">
             {row?.cell?.value.name}
           </span>
         </span>
@@ -118,34 +118,41 @@ const COLUMNS = [
     },
   },
 
-  {
-    Header: "status",
-    accessor: "status",
-    Cell: (row) => {
-      return (
-        <span className="block min-w-[140px] text-left">
-          <span className="inline-block text-center mx-auto py-1">
-            {row?.cell?.value === "progress" && (
-              <span className="flex items-center space-x-3 rtl:space-x-reverse">
-                <span className="h-[6px] w-[6px] bg-danger-500 rounded-full inline-block ring-4 ring-opacity-30 ring-danger-500"></span>
-                <span>New</span>
-              </span>
-            )}
-            {row?.cell?.value === "complete" && (
-              <span className="flex items-center space-x-3 rtl:space-x-reverse">
-                <span className="h-[6px] w-[6px] bg-success-500 rounded-full inline-block ring-4 ring-opacity-30 ring-success-500"></span>
+  // {
+  //   Header: "status",
+  //   accessor: "status",
+  //   Cell: (row) => {
+  //     return (
+  //       <span className="block min-w-[140px] text-left">
+  //         <span className="inline-block text-center mx-auto py-1">
+  //           {row?.cell?.value === "progress" && (
+  //             <span className="flex items-center space-x-3 rtl:space-x-reverse">
+  //               <span className="h-[6px] w-[6px] bg-danger-500 rounded-full inline-block ring-4 ring-opacity-30 ring-danger-500"></span>
+  //               <span>New</span>
+  //             </span>
+  //           )}
+  //           {row?.cell?.value === "complete" && (
+  //             <span className="flex items-center space-x-3 rtl:space-x-reverse">
+  //               <span className="h-[6px] w-[6px] bg-success-500 rounded-full inline-block ring-4 ring-opacity-30 ring-success-500"></span>
 
-                <span>Top</span>
-              </span>
-            )}
-          </span>
-        </span>
-      );
-    },
-  },
+  //               <span>Top</span>
+  //             </span>
+  //           )}
+  //         </span>
+  //       </span>
+  //     );
+  //   },
+  // },
   {
     Header: "time",
     accessor: "time",
+    Cell: (row) => {
+      return <span>{row?.cell?.value}</span>;
+    },
+  },
+  {
+    Header: "value",
+    accessor: "status",
     Cell: (row) => {
       return <span>{row?.cell?.value}</span>;
     },
