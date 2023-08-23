@@ -15,7 +15,7 @@ const SidebarLogo = ({ menuHover }) => {
   const [skin] = useSkin();
   return (
     <div
-      className={` logo-segment flex justify-center items-center bg-white dark:bg-slate-800 z-[9] py-6  px-4 
+      className={` logo-segment flex items-center bg-white dark:bg-slate-800 z-[9] py-6  px-4 
       ${menuHover ? "logo-hovered" : ""}
       ${
         skin === "bordered"
@@ -27,7 +27,7 @@ const SidebarLogo = ({ menuHover }) => {
     >
       <Link href="/">
         <div className="flex items-center space-x-4">
-          <div className="logo-icon w-32">
+          <div className="logo-icon w-28">
             {!isDark && !isSemiDark ? (
               <img src="/assets/images/logo/policylogo.png" alt="" />
             ) : (
