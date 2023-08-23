@@ -14,59 +14,100 @@ export const menuItems = [
         childlink: "reserves",
       },
       {
-        childtitle: "CeFi Leverage",
-        childlink: "reserves",
-        emptyLink: true,
-      },
-      {
-        childtitle:
-          "CeFi Interconnections: Entities (Domestic & International)",
-        childlink: "reserves",
-        emptyLink: true,
-      },
-      {
         childtitle: "DeFi Financial Health Aave",
         childlink: "definancial",
       },
+    ],
+  },
+  {
+    title: "Financial Crime & AML/CFT Risk",
+    icon: "heroicons-outline:home",
+    isOpen: true,
+    isHide: true,
+    child: [
       {
-        childtitle: "DeFi Reserves",
-        childlink: "definancial",
+        childtitle: "Sanction List",
+        childlink: "test",
         emptyLink: true,
       },
       {
-        childtitle: "DeFi Leverage",
-        childlink: "definancial",
-        emptyLink: true,
-      },
-      {
-        childtitle: "DeFi Traded Assets/ Products",
-        childlink: "definancial",
-        emptyLink: true,
-      },
-      {
-        childtitle: "DeFi Interconnections: Protocols",
-        childlink: "definancial",
-        emptyLink: true,
-      },
-      {
-        childtitle: "DeFi Cross-chain bridges",
-        childlink: "definancial",
+        childtitle: "Large value cross-border transactions",
+        childlink: "test",
         emptyLink: true,
       },
     ],
   },
-
   {
-    title: "Reports",
+    title: "Prudential Risk",
+    icon: "heroicons-outline:home",
+    isOpen: true,
     isHide: true,
-    icon: "heroicons-outline:document-text",
-    link: "reports",
+    child: [
+      {
+        childtitle: "Reserves and asset segregation",
+        childlink: "test",
+        emptyLink: true,
+      },
+      {
+        childtitle: "Financial Health & P&L",
+        childlink: "test",
+        emptyLink: true,
+      },
+    ],
   },
   {
-    title: "Vault",
+    title: "Financial Stability Risk",
+    icon: "heroicons-outline:home",
+    isOpen: true,
     isHide: true,
-    icon: "heroicons-outline:lock-closed",
-    link: "vaults",
+    child: [
+      {
+        childtitle: "Leverage threshold",
+        childlink: "test",
+        emptyLink: true,
+      },
+      {
+        childtitle: "Interconnections",
+        childlink: "test",
+        emptyLink: true,
+      },
+    ],
+  },
+  {
+    title: "Market Integrity Risk",
+    icon: "heroicons-outline:home",
+    isOpen: true,
+    isHide: true,
+    child: [
+      {
+        childtitle: "Insider trading",
+        childlink: "test",
+        emptyLink: true,
+      },
+      {
+        childtitle: "Pump and Dump activity",
+        childlink: "test",
+        emptyLink: true,
+      },
+    ],
+  },
+  {
+    title: "Cybersecurity Risk",
+    icon: "heroicons-outline:home",
+    isOpen: true,
+    isHide: true,
+    child: [
+      {
+        childtitle: "Oracle manipulation",
+        childlink: "test",
+        emptyLink: true,
+      },
+      {
+        childtitle: "Exploits",
+        childlink: "test",
+        emptyLink: true,
+      },
+    ],
   },
 ];
 
