@@ -1690,6 +1690,19 @@ export const recentOrder = [
   },
 ];
 
+export const recentOrder2 = [
+  {
+    user: {
+      name: "Binance",
+      image: "/assets/images/users/user-1.jpg",
+    },
+    product: "Headphone",
+    invoice: "$56,009,507,292.46",
+    price: "$56,009,507,292.46",
+    status: "N/A",
+  },
+];
+
 export const teamData = [
   {
     customer: {
